@@ -68,14 +68,14 @@ const [failure, setFailure] = useState(null)
   }, [form])
   
 const handleChange = (e) => {
-  e.presist(
+  e.presist()
     validateChange(e)
     setForm({
       ...form,
       [e.target.fullName]: 
       e.target.type === "checkbox" ? e.target.checked : e.target.value
     })
-  )
+
 }
 
 const handleSubmit = (e) => {
@@ -141,8 +141,4 @@ const handleSubmit = (e) => {
       {/* 👇 Make sure the submit stays disabled until the form validates! */}
       <input type="submit" disabled={!ableToSubmit} />
     </form>
-  )
-}  
-
-  
-</>
+  </>)}
