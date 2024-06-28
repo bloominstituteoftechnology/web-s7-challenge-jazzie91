@@ -8,15 +8,14 @@ function App() {
   return (
     <div id="app">
       <nav>
-      <NavLink to="/" exact activeClassName="active">Home</NavLink>
-      <NavLink to="/order" exact activeClassName="active">Order</NavLink>
+      <NavLink to="/" className="active">Home</NavLink>
+      <NavLink to="/order" className="active">Order</NavLink>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="order" element={<Form />} />
+        <Route path="/order" element={<Form />} />
       </Routes>
-      <Home />
-      <Form />
+      
     </div>
   )
 }
